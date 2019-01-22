@@ -1,0 +1,35 @@
+server:
+  port: 8080
+#应用名称
+spring:
+  dubbo:
+    application:
+      #注册在注册中心的名称，唯一标识，请勿重复
+      id: demo-dubbo
+      name: demo-dubbo
+    #注册中心地址，zookeeper集群，启动输出可以看见链接了多个
+    #单zookeeper服务：zookeeper://127.0.0.1:2181
+    registry:
+      address: zookeeper://127.0.0.1:2181
+    #暴露服务方式
+    protocols:
+      rmi:
+        id: rmi
+        name: rmi
+        port: 20880
+        status: server
+
+      dubbo:
+        id: dubbo
+        name: dubbo
+        port: 20881
+        status: server
+    #    protocol:
+    #      id: rmi
+    #      #默认名称，勿修改
+    #      name: rmi
+    #      #暴露服务端口 （默认是20880，修改端口，不同的服务提供者端口不能重复）
+    #      port: 20880
+    #      status : server
+    #调用dubbo组建扫描的项目路径
+    scan: com.you.comm.service
