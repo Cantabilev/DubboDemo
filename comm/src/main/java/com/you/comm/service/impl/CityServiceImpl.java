@@ -7,7 +7,7 @@ import com.you.comm.service.CityService;
  * @author liuqiqi
  * @date 2019/1/21 13:15
  */
-@Service(provider = "protocolConfigRmi")
+@Service(provider = "providerConfigRmi")
 public class CityServiceImpl implements CityService {
     @Override
     public String getCity(Integer num) {

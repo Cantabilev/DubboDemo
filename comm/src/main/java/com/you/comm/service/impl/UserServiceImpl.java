@@ -7,7 +7,7 @@ import com.you.comm.service.UserService;
  * @author liuqiqi
  * @date 2019/1/21 13:15
  */
-@Service(provider = "protocolConfigDubbo")
+@Service(provider = "providerConfigDubbo")
 public class UserServiceImpl implements UserService {
     @Override
     public String getUser(Integer num) {
